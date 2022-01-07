@@ -1,6 +1,6 @@
 /*!
  * perfect-scrollbar v1.5.3
- * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
+ * Copyright 2022 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -323,10 +323,9 @@ var env = {
 function updateGeometry(i) {
   var element = i.element;
   var roundedScrollTop = Math.floor(element.scrollTop);
-  var rect = element.getBoundingClientRect();
 
-  i.containerWidth = Math.round(rect.width);
-  i.containerHeight = Math.round(rect.height);
+  i.containerWidth = element.clientWidth;
+  i.containerHeight = element.clientHeight;
 
   i.contentWidth = element.scrollWidth;
   i.contentHeight = element.scrollHeight;
